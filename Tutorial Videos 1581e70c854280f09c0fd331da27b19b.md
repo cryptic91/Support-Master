@@ -4,6 +4,15 @@ Created by: MD Rakibul Islam Shanto
 Created time: December 10, 2024 12:42 PM
 Tags: Tutorials
 
+---
+
+### PPLR Elements
+
+- Checkbox element of PPLR
+    [https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb](https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb) 
+
+---
+
 ### Link Share 🔗
 
 - How to share a product link?
@@ -257,8 +266,8 @@ Tags: Tutorials
     
 - How to customize two products by adding two views which is alternative option of bulk customization
     
-    video by[https://www.loom.com/share/d0aa3178ebc7483cb01e6a370393f7fd](https://www.loom.com/share/d0aa3178ebc7483cb01e6a370393f7fd)[8c0a156ac33cd75d](https://www.loom.com/share/3ef1ebc255b044ff8c0a156ac33cd75d) 
-    
+    video by[https://www.loom.com/share/d0aa3178ebc7483cb01e6a370393f7fd](https://www.loom.com/share/d0aa3178ebc7483cb01e6a370393f7fd)[8c0a156ac33cd75d](https://www.loom.com/share/3ef1ebc255b044ff8c0a156ac33cd75d)
+
 
 ### BoostlyCart🛒
 
