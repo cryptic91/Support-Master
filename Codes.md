@@ -847,6 +847,38 @@ document.querySelectorAll('select[name="price_var[]"]').forEach(function(select)
 
 ---
 
+### When live preview is not showing after changing the featured image from the thumbnail images (theme side / bottom images) 
+
+```jsx
+document.onclick = function (e) {
+  var el = e.target;
+  var found = 0;
+  var p = el;
+  for (var i = 0; i < 8; i++) {
+    if (!p) break;
+    if (p.className && (p.className + '').indexOf('product-personalizer') > -1) {
+      found = 1;
+    }
+    p = p.parentElement;
+  }
+  if (found === 0) return;
+
+  setTimeout(function () {
+    var slides = document.getElementsByClassName('t4s-product__media-item');
+    for (var j = 0; j < slides.length; j++) {
+      slides[j].className = slides[j].className.replace(' is-selected', '').replace('is-selected', '');
+      slides[j].setAttribute('aria-hidden', 'true');
+    }
+    if (slides[0]) {
+      slides[0].className = slides[0].className + ' is-selected';
+      slides[0].removeAttribute('aria-hidden');
+    }
+  }, 100);
+};
+```
+
+---
+
 ### Test
 
 ```jsx
