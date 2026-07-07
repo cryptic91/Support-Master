@@ -879,6 +879,18 @@ document.onclick = function (e) {
 
 ---
 
+### Scrolling issue of the font drop-down (iOS)
+Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914 
+```css
+@media screen and (max-width: 768px) {
+    .pplr-modal-body .pplr-selecter-options {
+       position:relative!important;
+     }
+}
+```
+
+---
+
 ### Test
 
 ```jsx
