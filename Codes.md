@@ -891,6 +891,38 @@ Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914
 
 ---
 
+### Changing multiple label names using Custom JS
+
+```jsx
+    jQuery(document).ready(function($) {
+    var charmNames = {
+        'one':   '1st Charms',
+        'two':   '2nd Charms',
+        'three': '3rd Charms',
+        'four':  '4th Charms',
+        'five':  '5th Charms',
+        'six':   '6th Charms',
+        'seven': '7th Charms'
+    };
+
+    function renameConditionalLabels() {
+        $.each(charmNames, function(numberWord, newName) {
+            var $label = $('.pplr-charms-' + numberWord + ' label.pplrlabel');
+            
+            if ($label.length && $label.text().indexOf(newName) === -1) {
+                $label.html(newName + ' <span class="pplr_option_price_span"></span>');
+            }
+        });
+    }
+    renameConditionalLabels();
+    setInterval(renameConditionalLabels, 300);
+    });
+
+```
+
+
+---
+
 ### Test
 
 ```jsx
