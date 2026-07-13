@@ -13,6 +13,12 @@ Tags: Tutorials
 
 ---
 
+### Multiple Views Related
+
+- How to Sync images Across Views with different Image sets [https://www.loom.com/share/1ed2b6b17cdf40008aebb46821290a69](https://www.loom.com/share/1ed2b6b17cdf40008aebb46821290a69)
+
+---
+
 ### Link Share 🔗
 
 - How to share a product link?
