@@ -923,6 +923,18 @@ Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914
 
 ---
 
+### To stop the click event of the theme using CSS
+
+```css
+    .product__media-toggle.product__media-zoom-lightbox {
+       pointer-events: none !important;
+       cursor: default !important;
+    }
+```
+
+
+---
+
 ### Test
 
 ```jsx
