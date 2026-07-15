@@ -654,7 +654,7 @@ The "up to 300 custom orders" limit means you can receive up to 300 personalized
 
 A custom order is any order that includes product personalization created with our app (such as custom text, image uploads, color selections, etc.).
 
-Once you reach 300 custom orders in a month, we recommend upgrading to a higher plan. Your store will continue to receive new orders, but if you notice any missing personalization data after exceeding 100 custom orders, upgrading will help prevent those issues.
+Once you reach 300 custom orders in a month, we recommend upgrading to a higher plan. Your store will continue to receive new orders, but if you notice any missing personalization data after exceeding 300 custom orders, upgrading will help prevent those issues.
      
 </details>
 
