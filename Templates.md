@@ -660,6 +660,19 @@ Once you reach 300 custom orders in a month, we recommend upgrading to a higher 
 
 ***
 
+## Can not select base variant as Link-variant
+
+<details>
+  <summary> 🔵 </summary>
+
+loading...
+  
+</details>
+
+***
+
+## title
+
 <details>
   <summary> 🟢🔵🔴 </summary>
 
