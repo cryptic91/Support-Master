@@ -932,6 +932,49 @@ Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914
     }
 ```
 
+---
+
+### If the `pplr-character-count` span is missing totally in Text Area
+
+```jsx
+
+    function addCharacterCounters() {
+      var wrappers = document.querySelectorAll('.pplr-wrapper.pplr-text');
+      for (var i = 0; i < wrappers.length; i++) {
+        var wrapper = wrappers[i];
+        var ta = wrapper.querySelector('textarea');
+        if (!ta) continue;
+        if (wrapper.querySelector('.pplr-character-count')) continue;
+        wrapper.classList.add('p_c_c');
+        var max = ta.getAttribute('data-maxlength') || '0';
+        var frame = ta.getAttribute('data-frame') || ta.getAttribute('data-main') || '0';
+        var span = document.createElement('span');
+        span.className = 'pplr-character-count';
+        span.setAttribute('data-frame', frame);
+        span.innerHTML = '<span class="ct">' + max + '</span> <span class="lt">characters left</span><span class="lm"> / ' + max + '</span>';
+        ta.parentNode.insertBefore(span, ta.nextSibling);
+      }
+    }
+    
+    // Run once on load
+    addCharacterCounters();
+    
+    // Watch for PPLR re-rendering on variant change
+    var observer = new MutationObserver(function(mutations) {
+      for (var i = 0; i < mutations.length; i++) {
+        if (mutations[i].addedNodes.length > 0) {
+          addCharacterCounters();
+          break;
+        }
+      }
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+```
 
 ---
 
