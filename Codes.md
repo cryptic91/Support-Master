@@ -978,6 +978,20 @@ Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914
 
 ---
 
+### When the text field cannot be selected or used to add any text on iPhone devices only
+
+Product link -  https://dfu2vzjso2qo89wc-75574706334.shopifypreview.com/products/personalized-premium-wooden-bear-puzzle-premium-wooden-family-bear-christmas-family-keepsake 
+
+```jsx
+
+document.querySelector('.product-personalizer').addEventListener('touchend', e => {
+    e.stopImmediatePropagation();
+}, true);
+
+```
+
+---
+
 ### Test
 
 ```jsx
