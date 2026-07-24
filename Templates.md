@@ -322,13 +322,13 @@ I'm looking forward to hearing back from you.
 <details>
   <summary> 🔴 </summary>
 
-During your app uninstallation, if you're already in the next month's billing cycle for the app subscription, then Shopify will charge you. All the subscriptions are handled by Shopify, and they received the payment, and later they disbursed it to us.
+During your app uninstallation, if you're already in the next month's billing cycle for the app subscription, then Shopify will charge you. All the subscriptions are handled by Shopify, and they receive the payment, and later they disburse it to us.
 
 To learn about the Shopify app billing cycle, please check this
 
 [https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/app-charges#app-billing-cycles](https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/app-charges#app-billing-cycles)
 
-We've sent your refund request to our billing team, they'll check it and get back to you as soon as possible.
+We've sent your refund request to our billing team; they'll check it and get back to you as soon as possible.
 
 **If the payment has not been completed through Shopify, they do not allow us to process a refund yet**. However, once you complete the payment, please let us know, and we will issue the refund promptly. We have also opened a ticket to keep things on track.
 
@@ -359,15 +359,13 @@ Could you please let us know why you are uninstalling and what your requirements
 However, if you still want to cancel the subscription, please follow these steps:
 [https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/](https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/)
 
-Hello ,
+Hi there,
+We are sorry to hear that you are leaving the app.
 
-Thanks for your query. We are sorry to hear you are leaving the app.
+To cancel the subscription, you can follow this doc: [https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/](https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/).
 
-You can follow this doc to cancel the subscription: [https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/](https://productpersonalizer.com/docs/canceling-product-personalizer-subscription/).
-
-Let us know if there is anything that we can do so you can use the app smoothly.
-
-Thank you for trying our app.
+If you need any assistance now or in the future, please do not hesitate to reach out; we are always here to help.
+Wishing you all the best, and we hope to work with you again someday.
 
 </details>
 
