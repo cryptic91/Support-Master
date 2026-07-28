@@ -992,6 +992,40 @@ document.querySelector('.product-personalizer').addEventListener('touchend', e =
 
 ---
 
+### For taking the product listing from the 'Product Options' of CDN
+
+Run this code in the browser console on the PPLR app products page. Run it once per page — it accumulates names across pages and opens a popup with the full numbered list each time.
+
+Example Steps:
+Go to page 1 → run the code → popup shows names 1-50
+Go to page 2 → run the same code again → popup shows names 1-100
+Go to page 3 → run the same code again → popup shows names 1-150 ✅
+Copy all from the last popup → paste into Excel/Sheets/Notepad
+
+Notes:
+- Duplicate names are automatically skipped
+- Always use the last popup — it has the complete list
+- If you refresh the page, window.pplrProductNames resets — start from page 1 again
+Works on any page size (50, 100, etc.)
+
+The code:
+```jsx
+if (!window.pplrProductNames) window.pplrProductNames = [];
+document.querySelectorAll('tr.hover_row td.title .name span').forEach(function(el) {
+  var name = el.textContent.trim();
+  if (name && window.pplrProductNames.indexOf(name) === -1) {
+    window.pplrProductNames.push(name);
+  }
+});
+var text = window.pplrProductNames.map(function(n, i) { return (i+1) + '. ' + n; }).join('\n');
+var win = window.open('', '_blank', 'width=600,height=400');
+win.document.write('<pre style="font-family:Arial;font-size:13px;padding:20px;">' + text + '</pre>');
+win.document.close();
+console.log('Total collected so far:', window.pplrProductNames.length);
+```
+
+---
+
 ### Test
 
 ```jsx
