@@ -1005,7 +1005,7 @@ Example Steps:
 Notes:
 - Duplicate names are automatically skipped
 - Always use the last popup — it has the complete list
-- If you refresh the page, `window.pplrProductNames resets` — start from page 1 again
+- If you refresh the page, `window.pplrProductNames` resets — start from page 1 again
 - Works on any page size (50, 100, etc.)
 
 The code:
