@@ -997,10 +997,10 @@ document.querySelector('.product-personalizer').addEventListener('touchend', e =
 Run this code in the browser console on the PPLR app products page. Run it once per page — it accumulates names across pages and opens a popup with the full numbered list each time.
 
 Example Steps:
-Go to page 1 → run the code → popup shows names 1-50
-Go to page 2 → run the same code again → popup shows names 1-100
-Go to page 3 → run the same code again → popup shows names 1-150 ✅
-Copy all from the last popup → paste into Excel/Sheets/Notepad
+1. Go to page 1 → run the code → popup shows names 1-50
+2. Go to page 2 → run the same code again → popup shows names 1-100
+3. Go to page 3 → run the same code again → popup shows names 1-150 ✅
+4. Copy all from the last popup → paste into Excel/Sheets/Notepad
 
 Notes:
 - Duplicate names are automatically skipped
