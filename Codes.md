@@ -888,6 +888,25 @@ Issue video - https://www.loom.com/share/cfa079174d13408a909a5f7133b36914
      }
 }
 ```
+---
+
+Another method used for this product - https://hanprinting.com/collections/sticker-font-preview/products/fontpreview 
+CSS
+```css
+@media screen and (max-width: 768px) {
+    .pplr-font-select .pplr-selecter-options {
+        position: relative !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        max-height: 250px;
+        overscroll-behavior: contain;
+    }
+}
+```
++ JS
+```jsx
+!function(){var f=function(){document.querySelectorAll('.pplr-selecter-options').forEach(function(d){if(d.dataset.x)return;d.dataset.x=1;var s=0;d.addEventListener('touchstart',function(e){s=e.touches[0].pageY},{passive:!0});d.addEventListener('touchmove',function(e){var y=e.touches[0].pageY,dy=s-y,st=d.scrollTop,sh=d.scrollHeight,ch=d.clientHeight;if(st<=0&&dy<0){e.preventDefault();return}if(st+ch>=sh&&dy>0){e.preventDefault();return}e.stopPropagation()},{passive:!1})})};document.readyState==='loading'?document.addEventListener('DOMContentLoaded',f):f();new MutationObserver(f).observe(document.body,{childList:!0,subtree:!0})}()
+```
 
 ---
 
