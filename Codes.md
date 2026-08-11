@@ -1045,6 +1045,35 @@ console.log('Total collected so far:', window.pplrProductNames.length);
 
 ---
 
+### Adding a smooth transition to the sticky preview image
+Only for mobile devices
+
+CSS 
+```css
+@media screen and (max-width: 768px) {
+    .pplrabs {
+        /* Force the browser to treat this as a smooth animation layer */
+        transition: transform 0.4s ease-in-out !important;
+        transform: translateZ(0) !important;
+        backface-visibility: hidden !important;
+        
+        /* Sometimes adding a tiny delay helps the browser catch up */
+        animation: smoothFade 0.5s ease-in-out;
+    }
+
+    @keyframes smoothFade {
+        0% { opacity: 0.8; transform: scale(0.99); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+    
+    /* Target the inner div too just in case */
+    .pplr-prev-left {
+        transition: all 0.3s ease !important;
+    }
+}
+```
+---
+
 ### Test
 
 ```jsx
