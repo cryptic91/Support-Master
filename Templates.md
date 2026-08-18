@@ -672,7 +672,7 @@ loading...
 ## Single/specific configuration/template transfer process
 
 <details>
-     <summary> 🔴 </ssummary>
+     <summary> 🔴 </summary>
 
 For single or specific configuration transfers, please note that all configurations with matching handles will be transferred from the source store to the destination store. We cannot transfer a specific or single product. The system checks product handles and transfers the configurations. For Assets & Template, all templates and assets (images, fonts, sets) will be transferred, and we cannot control the quantity. 
 
