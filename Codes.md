@@ -1074,6 +1074,27 @@ CSS
 ```
 ---
 
+### For DOM re-rendering issue while changing the Native Variants
+Issued product: https://store.the-ixg.com/products/personalized-door-mat-18x30-gray-bordered-mat?variant=47962275512550 
+
+```jsx
+if(!window.Shopify.PaymentButton){
+    window.Shopify.PaymentButton = {init: () => {}}
+}
+const prev_shop_pay_btn_func = window.Shopify.PaymentButton.init;
+window.Shopify.PaymentButton.init = () => {
+    prev_shop_pay_btn_func()
+    jQuery(this).closest('form').css("display", 'block')
+    window.pplr_Loaded = false;
+    pplr_el = null;
+    pplr_tab = '';
+    pplr_Ready();
+    jQuery(this).closest('form').css("display", 'contents')
+}
+```
+
+---
+
 ### Test
 
 ```jsx
