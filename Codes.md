@@ -1095,6 +1095,174 @@ window.Shopify.PaymentButton.init = () => {
 
 ---
 
+### Custom Dev - if anyone wants to user HEX color code while using the Gradient in color set
+
+In CSS - 
+```css
+/*                                  adding HEX or RGB for radient                                          */
+
+
+/* ===== 1. Lay out the whole control as a clean horizontal row ===== */
+.minicolors.minicolors-theme-default {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* ===== 2. The swatch becomes a real, visible color-preview chip ===== */
+.minicolors-theme-default .minicolors-swatch {
+  position: relative !important;   /* take it OUT of the input's overlay flow */
+  top: auto !important;
+  left: auto !important;
+  width: 32px !important;
+  height: 32px !important;
+  border: 1px solid #bbb !important;
+  border-radius: 4px !important;
+  flex: 0 0 auto !important;
+  order: 1 !important;             /* chip sits on the LEFT */
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08) !important;
+}
+.minicolors-swatch-color {
+  border-radius: 3px !important;
+}
+
+/* ===== 3. Text input: full readable width, NO padding hack (swatch is separate now) ===== */
+.minicolors input.minicolors-input,
+input[name="properties[Color Choices]"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  order: 2 !important;             /* input sits in the MIDDLE */
+  width: 120px !important;
+  height: 32px !important;
+  padding: 6px 10px !important;    /* normal padding — swatch no longer overlaps */
+  margin: 0 !important;
+  font-family: monospace !important;
+  font-size: 14px !important;
+  color: #222 !important;
+  background: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  z-index: 2 !important;
+  cursor: text !important;
+  pointer-events: auto !important;
+}
+
+/* ===== 4. Picker panel opens to the RIGHT of the row, never covering content ===== */
+.minicolors-panel {
+  top: 0 !important;
+  left: calc(32px + 8px + 120px + 8px) !important;  /* chip + gaps + input + gap */
+  right: auto !important;
+  bottom: auto !important;
+  order: 3 !important;
+}
+
+/* ===== 5. Validation feedback ===== */
+input[name="properties[Color Choices]"].manual-valid {
+  border-color: #4CAF50 !important;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.25) !important;
+}
+input[name="properties[Color Choices]"].manual-invalid {
+  border-color: #f44336 !important;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.25) !important;
+}
+input[name="properties[Color Choices]"] {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+
+/*----------------------------------------------HEX RGB ended----------------------------------------------------------*/
+```
+
+In JS - 
+```jsc
+// HEX or RGB
+
+(function () {
+  const SELECTOR = 'input[name="properties[Color Choices]"]';
+
+  function isValidColor(v) {
+    v = v.trim();
+    return /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/.test(v) ||
+           /^rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*(0|1|0?\.\d+))?\s*\)$/i.test(v);
+  }
+  function normalizeHex(v) {
+    v = v.trim();
+    if (/^#[0-9A-Fa-f]{3}$/.test(v)) return '#' + v[1]+v[1] + v[2]+v[2] + v[3]+v[3];
+    return v.toUpperCase();
+  }
+
+  function applyLayout(input) {
+    const wrap = input.closest('.minicolors');
+    if (wrap && !wrap.classList.contains('minicolors-position-right')) {
+      wrap.classList.remove('minicolors-position-bottom', 'minicolors-position-top', 'minicolors-position-left');
+      wrap.classList.add('minicolors-position-right');
+    }
+  }
+
+  function syncSwatch(input) {
+    // Safety net: ensure the visible chip reflects the current value
+    const swatch = input.parentElement.querySelector('.minicolors-swatch-color');
+    if (swatch && isValidColor(input.value)) {
+      swatch.style.backgroundColor = normalizeHex(input.value);
+    }
+  }
+
+  function initManualEntry() {
+    const input = document.querySelector(SELECTOR);
+    if (!input) return;
+
+    applyLayout(input);          // re-apply every pass (survives theme re-init)
+
+    if (input.dataset.manualEntryBound) { syncSwatch(input); return; }
+    input.dataset.manualEntryBound = 'true';
+
+    let debounceTimer = null;
+    function processManualInput() {
+      const raw = input.value.trim();
+      if (!raw) { input.classList.remove('manual-valid', 'manual-invalid'); return; }
+
+      const valid = isValidColor(raw);
+      input.classList.toggle('manual-valid', valid);
+      input.classList.toggle('manual-invalid', !valid);
+
+      if (valid) {
+        const normalized = normalizeHex(raw);
+        if (typeof jQuery !== 'undefined' && jQuery(input).data('minicolors')) {
+          jQuery(input).minicolors('value', normalized);  // updates swatch + grid officially [[1]]
+        } else {
+          syncSwatch(input);
+        }
+        if (typeof LoadPplrWithFont === 'function') {
+          LoadPplrWithFont(input.dataset.frame, true, input);
+        }
+      }
+    }
+
+    input.addEventListener('input', () => { clearTimeout(debounceTimer); debounceTimer = setTimeout(processManualInput, 300); });
+    input.addEventListener('blur',  () => { clearTimeout(debounceTimer); processManualInput(); });
+    input.addEventListener('paste', () => { clearTimeout(debounceTimer); setTimeout(processManualInput, 50); });
+
+    // When the PICKER is used (drag/click), keep the chip in sync too
+    input.addEventListener('change', () => { applyLayout(input); syncSwatch(input); });
+
+    syncSwatch(input);
+  }
+
+  const observer = new MutationObserver(() => initManualEntry());
+  observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+  initManualEntry();
+})();
+
+// HEX RGB ended
+```
+
+---
+
 ### Test
 
 ```jsx
