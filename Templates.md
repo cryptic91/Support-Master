@@ -680,6 +680,25 @@ For single or specific configuration transfers, please note that all configurati
 
 ***
 
+## Those who want to go back to the legacy version (V1)
+
+<details>
+     <summary>🟢</summary>
+
+Hi, 
+
+We understand that you have hundreds of products customized with the legacy version. You can try this link to see whether it takes you to the old layout or not: https://admin.shopify.com/store/directhubuk/apps/product-personalizer/product-personalizer/personalized.php. 
+
+Please note that the version you want to use is out of date and will not receive further updates, as we are already introducing a new version with drag-and-drop on the live preview, multi-file uploads, and more. The dev team will be working on that version. The legacy version is already out of date, and if Shopify releases any structural updates, this version might break. 
+
+We completely understand that you want the legacy version, since you are an expert with it. However, the new versions are easier and more modern. If you try it for a few days, you will definitely like it. We're here to help with anything you need. We will share basic tutorials, and if you'd like, we can make a full tutorial video using an existing project so you can see how it works. Since you're already using the old version, you already know the logic and will become an expert within a few days. 
+
+We are here 24/7 to support you.
+     
+</details>
+
+***
+
 ## title
 
 <details>
