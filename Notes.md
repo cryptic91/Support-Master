@@ -310,3 +310,11 @@ For your use case, we would recommend handling any additional internal naming or
 Alternatively, a hidden field can be added via theme customization, but this would be outside of our app's native configuration.
 
 </details>
+
+---
+
+## Shopify er Bundle app is not compatible with our cart transform feature
+
+---
+
+
