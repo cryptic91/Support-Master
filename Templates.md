@@ -699,6 +699,27 @@ We are here 24/7 to support you.
 
 ***
 
+*** multi-select on image choice
+
+<details>
+     <summary>🔵</summary>
+
+Hello, 
+
+We’re excited to introduce a new enhancement to the Image Choice field that makes product customization easier and more flexible than ever! 
+
+With our new multi-select feature, your customers can select multiple image options and drag them individually or together directly on the live preview, giving them greater flexibility and control over their product designs. 
+
+Watch our short video to see the new feature in action: https://www.loom.com/share/3269c6a1d3ff4c5f9193951b6fcfbd7b.
+
+If you have any questions or need assistance, please feel free to contact us. Our support team is available 24/7 to help you. 
+
+Thank you. 
+     
+</details>
+
+***
+
 ## title
 
 <details>
