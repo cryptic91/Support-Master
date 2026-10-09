@@ -699,7 +699,9 @@ We are here 24/7 to support you.
 
 ***
 
-*** multi-select on image choice
+*** 
+
+## Multi-select on image choice
 
 <details>
      <summary>🔵</summary>
