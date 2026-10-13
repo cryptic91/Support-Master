@@ -1274,10 +1274,8 @@ setInterval(function() {
     }
 }, 500);
 
-<img width="1793" height="853" alt="image" src="https://github.com/user-attachments/assets/48abacdb-ff94-45fa-b65f-c165f8e602c5" />
-
-
 ```
+<img width="1793" height="853" alt="image" src="https://github.com/user-attachments/assets/48abacdb-ff94-45fa-b65f-c165f8e602c5" />
 
 ---
 
