@@ -1263,6 +1263,24 @@ In JS -
 
 ---
 
+### For changing text or translating the V3 upload text 
+
+```jsx
+
+setInterval(function() {
+    var targetSpan = document.querySelector('.pplr-up-hint');
+    if (targetSpan && targetSpan.innerText.trim() !== 'ou déposez votre fichier ici') {
+        targetSpan.innerText = 'ou déposez votre fichier ici';
+    }
+}, 500);
+
+<img width="1793" height="853" alt="image" src="https://github.com/user-attachments/assets/48abacdb-ff94-45fa-b65f-c165f8e602c5" />
+
+
+```
+
+---
+
 ### Test
 
 ```jsx
