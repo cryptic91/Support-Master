@@ -1279,6 +1279,101 @@ setInterval(function() {
 
 ---
 
+### Custom Color picker
+
+- Merchant wants to use a universal color picker in the storefront.
+- We use the browser's color picker on the storefront, like most other apps. In this case, custom code can provide a universal style for the storefront color picker. 
+
+```jsx
+(function () {
+  if (window.pplrPickrLoaded) return;
+  window.pplrPickrLoaded = true;
+
+  var BASE = 'https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.9.1/dist/';
+
+  var SWATCHES = [
+    '#000000', '#ffffff', '#9e9e9e', '#e53935',
+    '#f48fb1', '#ff9800', '#ffd600', '#43a047',
+    '#26a69a', '#1e88e5', '#3949ab', '#8e24aa'
+  ];
+
+  var css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = BASE + 'themes/classic.min.css';
+  document.head.appendChild(css);
+
+  var style = document.createElement('style');
+  style.textContent =
+    '.pcr-app{z-index:2147483000;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18),0 2px 6px rgba(0,0,0,.08)}' +
+    '.pcr-app .pcr-swatches > button{border-radius:50%}' +
+    '.pcr-app .pcr-swatches > button::after{border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}' +
+    '.pcr-app .pcr-interaction .pcr-save{background:#111;border-radius:6px}' +
+    '.pcr-app .pcr-interaction .pcr-result{border-radius:6px}' +
+    '.pplr-cp .pplr-cp-native{cursor:pointer}';
+  document.head.appendChild(style);
+
+  var script = document.createElement('script');
+  script.src = BASE + 'pickr.min.js';
+  document.head.appendChild(script);
+
+  function toHex(color) {
+    return color ? color.toHEXA().toString().slice(0, 7).toLowerCase() : '';
+  }
+
+  function createPicker(swatch, input) {
+    var pickr = Pickr.create({
+      el: swatch,
+      useAsButton: true,
+      theme: 'classic',
+      default: input.value || '#000000',
+      position: 'bottom-start',
+      swatches: SWATCHES,
+      lockOpacity: true,
+      comparison: false,
+      components: {
+        preview: true,
+        opacity: false,
+        hue: true,
+        interaction: { input: true, save: true }
+      },
+      i18n: { 'btn:save': 'Done' }
+    });
+
+    var apply = function (color) {
+      var hex = toHex(color);
+      if (!hex || hex === input.value.toLowerCase()) return;
+      input.value = hex;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+
+    pickr.on('init', function () { pickr.show(); });
+    pickr.on('change', apply);
+    pickr.on('swatchselect', apply);
+    pickr.on('save', function (color) {
+      apply(color);
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+      pickr.hide();
+    });
+    pickr.on('show', function () {
+      if (input.value) pickr.setColor(input.value, true)
+    });
+
+    swatch._pplrPickr = pickr;
+  }
+  document.addEventListener('click', function (e) {
+    var swatch = e.target.closest && e.target.closest('.pplr-cp-native');
+    if (!swatch) return;
+    e.preventDefault();
+    if (swatch._pplrPickr) return; // Pickr toggles itse
+    var input = swatch.parentNode.querySelector('input.jscolor');
+    if (!input || input.disabled || !window.Pickr) retur
+    createPicker(swatch, input);
+  }, true);
+})();
+```
+
+---
+
 ### Test
 
 ```jsx
