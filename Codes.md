@@ -519,6 +519,16 @@ checkZeptoButton();
 $('.product-form,.pplrform').find('[name="add"][type="submit"]').addClass("p_a_t_c")
 ```
 
+---
+
+### Class to show original image in cart
+
+```jsx
+ pplr_original_img
+```
+
+---
+
 ### How to check price from console?
 
 ```jsx
