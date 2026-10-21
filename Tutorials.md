@@ -9,7 +9,9 @@ Tags: Tutorials
 ### PPLR Elements
 
 - Checkbox element of PPLR
-    [https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb](https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb) 
+    [https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb](https://www.loom.com/share/9d103f88860f49c3af3c81df7e6e26bb)
+
+- How the Character limit works in multi-line [https://www.loom.com/share/a43f30ad68824807a4d0b8097049cf2b](https://www.loom.com/share/a43f30ad68824807a4d0b8097049cf2b)
 
 ---
 
