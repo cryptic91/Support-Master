@@ -144,6 +144,15 @@ We have created some **helpful videos** to provide you with a hands-on understa
 
 Here is our **documentation** link: [https://www.productpersonalizer.com/docs/](https://www.productpersonalizer.com/docs/)
 
+---
+
+Here are the tutorials in short -
+
+How to Activate the app in the theme and add app block in the product template - https://www.loom.com/share/f5427e02daf545fab0c2777402bcaadd
+Sidebar Navigation quick overview: https://www.loom.com/share/c71bd34dc86b497c9d66e68d3963b27e
+How to configure a product: https://www.loom.com/share/a8d86a4042bc4713afad4cdc0347e0c0
+How to configure a product (A bit short video:) https://www.loom.com/share/a70c95b46e844fa8948652505655f4d2
+
 </details>
 
 ***
