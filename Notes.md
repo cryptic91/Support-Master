@@ -317,4 +317,40 @@ Alternatively, a hidden field can be added via theme customization, but this wou
 
 ---
 
+## PHP Vulnerabilities 
 
+<details>
+    <summary>Check Question and Answer</summary>
+
+**Question**
+Dear Zepto Apps Support Team,
+
+We operate an online store called Seanature on Shopify and use your Zepto Product Personalizer app.
+
+We are contacting you regarding the PHP security vulnerabilities publicly disclosed on October 21, 2026.
+
+As a precaution, we temporarily took our website offline while reviewing the potential security risks. Before proceeding further, we would appreciate your confirmation on the following points:
+Does Zepto Product Personalizer use any PHP-based servers or components that may be affected by these vulnerabilities?
+If applicable, have all necessary security patches been applied to your infrastructure?
+Is any action required on our side, such as updating or reinstalling the app?
+Has your investigation identified any potential security incidents or risks to customer data associated with these vulnerabilities?
+We would appreciate your prompt response so that we can assess the situation and ensure the continued safe operation of our store.
+
+Thank you for your assistance.
+
+---
+**Answer**
+Hello,
+Thank you for reaching out about the recent PHP security vulnerability.
+
+We took immediate action on the same day and applied the official security patch to all our servers. We also reviewed our server logs and found no signs of unauthorized access. As an additional precaution, we rotated the app's credentials in accordance with Shopify's security guidance.
+
+What this means for you:
+- Your store data, personalization settings, and order files remain unaffected.
+- The app, product-page personalizer, and order files have continued to operate without interruption.
+- No action is required from your side, and no downtime or service suspension is expected.
+
+Feel free to let us know if you have any further questions or concerns. We'll be happy to assist.
+Thank you.
+    
+</details>
