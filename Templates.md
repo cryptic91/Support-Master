@@ -278,6 +278,7 @@ Have a great day!
 To investigate this issue further, we need access to your store. We have sent you a collaboration access request; please accept it and let us know once you've done so. 
 
 Video Demonstration - https://www.loom.com/share/c21f42f7301f4eecb6dad4782781cb26
+
 Doc from Shopify - [https://help.shopify.com/en/partners/dashboard/managing-stores/request-access](https://help.shopify.com/en/partners/dashboard/managing-stores/request-access)
 
 </details>
