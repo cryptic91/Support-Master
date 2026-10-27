@@ -626,7 +626,7 @@ $(document).on('input', '.pplr-wrapper .pplr_text', function () {
     });
 ```
 
-### Restrict Emojis when Character type is ALL (updated)
+### Restrict Emojis when Character type is ALL (updated) 
 
 ```jsx
 
@@ -640,9 +640,7 @@ $(document).on('input', '.pplr-wrapper .pplr_text', function () {
 ```
 ---
 
-\u{00C0}-\u{024F} — Blocks accented characters like ž, é, ñ.
-
-\u{1F300}-... — Blocks all the emojis (smileys, flags, symbols, etc.).
+### Restrict Emoji's and accent characters ž, é, ñ (updated)
 
 ```jsx
 
