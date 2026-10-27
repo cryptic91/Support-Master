@@ -638,6 +638,22 @@ $(document).on('input', '.pplr-wrapper .pplr_text', function () {
 });
 
 ```
+---
+
+\u{00C0}-\u{024F} — Blocks accented characters like ž, é, ñ.
+
+\u{1F300}-... — Blocks all the emojis (smileys, flags, symbols, etc.).
+
+```jsx
+
+$(document).on('input', '.pplr-wrapper .pplr_text', function () {
+    this.value = this.value.replace(
+        /[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FAFF}\u{2600}-\u{27BF}\u{00C0}-\u{024F}]/gu,
+        ''
+    );
+});
+
+```
 
 ### Packing slip (usually from 132 line)
 
