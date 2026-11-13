@@ -47,3 +47,32 @@ Open the product page and run this command in the browser console:
 **Important:** Be aware of existing cart items before enabling this feature, as previously added items may show an invalid price.
 
 --- 
+
+# Duplicate Meta Pixel AddToCart Events – Troubleshooting
+
+**Issue:** Multiple Meta Pixel `AddToCart` events appear after clicking Add to Cart once.
+
+**Store:** `voroam.com`
+
+**Extension to Use:** Meta Ads Data Advisor (Chrome / Microsoft Edge)
+
+**How to Test:**
+
+1. Install the **Meta Ads Data Advisor** extension.
+2. Open the product page and click **Add to Cart** once.
+3. Check the number of `AddToCart` events.
+4. Open DevTools → Network and verify `/cart/add.js` requests.
+5. Block Zepto scripts through DevTools → Network Request Blocking.
+6. Refresh and repeat the test.
+
+**Test Results:**
+
+- Zepto enabled: **2 AddToCart events**
+- Zepto blocked: **2 AddToCart events**
+- Shopify cart requests: **1**
+
+**Conclusion:** Duplicate events occurred even with Zepto blocked, indicating the issue was not caused solely by our app.
+
+**Possible Causes:** Shopify theme, Meta Pixel configuration, or third-party tracking scripts.
+
+**Important:** Always test with Zepto enabled and blocked before determining the source of duplicate ATC events.
