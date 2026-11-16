@@ -42,7 +42,7 @@ Tags: Tutorials
 
 - Create Quantity Based Discounts for Options using link-variant
 
-https://www.loom.com/share/32fc7f1f4199414dadc691fc360c271e 
+    https://www.loom.com/share/32fc7f1f4199414dadc691fc360c271e 
 
 
 - How to Create a Discount code + Showing discount code in cart + Showing discount code in checkout**?**
