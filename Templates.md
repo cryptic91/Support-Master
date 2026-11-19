@@ -733,6 +733,24 @@ Thank you.
 
 ***
 
+## Why is the app not available? 
+
+<details>
+     <summary>🔴</summary>
+
+Hi there, 
+Thank you for reaching out! 
+
+Our app will be available on the Shopify App Store again soon. We're currently working on an update, so it is temporarily unavailable. In the meantime, please rest assured that existing installations are unaffected, and your store can continue using the app as usual. It will be live again this month. 
+
+We sincerely apologize for any concern this may have caused. Our support team is available 24/7, so please feel free to reach out whenever you need assistance. 
+
+Thank you for your patience and continued trust in us! 
+
+</details>
+
+***
+
 ## title
 
 <details>
