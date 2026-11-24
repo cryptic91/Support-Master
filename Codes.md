@@ -8,9 +8,9 @@ Tags: Custom Code
 
 [https://muhtasimmahir.github.io/ZeptoAppsTemplateGenerator/](https://muhtasimmahir.github.io/ZeptoAppsTemplateGenerator/)
 
-### Code for updating additional charge in both compare at prices
+### Code for updating the additional charge in both Compare at Prices
 
-Product link where the code is used - (https://xz0az6-bm.myshopify.com/products/dubya-tune-up-kit-6-pack)[https://xz0az6-bm.myshopify.com/products/dubya-tune-up-kit-6-pack] 
+Product link where the code is used - https://xz0az6-bm.myshopify.com/products/dubya-tune-up-kit-6-pack 
 
 ```jsx
     const prevCalcPrice = window.PPLR_CAlCULATE_PRICE;
