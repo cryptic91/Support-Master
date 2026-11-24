@@ -8,6 +8,28 @@ Tags: Custom Code
 
 [https://muhtasimmahir.github.io/ZeptoAppsTemplateGenerator/](https://muhtasimmahir.github.io/ZeptoAppsTemplateGenerator/)
 
+### Code for updating additional charge in both compare at prices
+
+Product link where the code is used - (https://xz0az6-bm.myshopify.com/products/dubya-tune-up-kit-6-pack)[https://xz0az6-bm.myshopify.com/products/dubya-tune-up-kit-6-pack] 
+
+```jsx
+    const prevCalcPrice = window.PPLR_CAlCULATE_PRICE;
+    window.PPLR_CAlCULATE_PRICE = (...args) => {
+      const price = prevCalcPrice(...args);
+      const activeVariantId = pplr_variant_id($(".pplr_atc_form"));
+      const compPrice = pplr_product.variants?.find(v => v.id == activeVariantId)?.compare_at_price;
+      if (compPrice) {
+        const newCompPrice = (compPrice / 100) + Number(price || 0);
+        const formatted = "$" + newCompPrice.toLocaleString("en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }) + " USD";
+        $(".product__info-container .price__sale s.price-item--regular").text(formatted);
+      }
+      return price;
+    };
+```
+
 ### Restrict Upload file format (ex. only .png format is acceptable)
 
 ```jsx
