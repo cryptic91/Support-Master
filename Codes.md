@@ -1423,8 +1423,39 @@ setInterval(function() {
 
 ---
 
+### Boostly Cart Drawer thumbnail Image = Product image
+
+If the merchant wants to show the product image instead of the preview image for the cart thumbnail image, use the JS below. 
+Example product - https://gnomenbow.com/products/agenda-14-laptop-long-tote 
+
+```jsx
+    (function () {
+      if (window.__boostlyOriginalLineImage) return;
+      window.__boostlyOriginalLineImage = true;
+    
+      var renderLine = window.zCartItemHtml;
+      window.zCartItemHtml = function (item) {
+        var args = Array.prototype.slice.call(arguments);
+        var props = item && item.properties;
+        if (props && props._pplr_preview) {
+          var cleanProps = Object.assign({}, props);
+          delete cleanProps._pplr_preview;
+          args[0] = Object.assign({}, item, { properties: cleanProps });
+        }
+        return renderLine.apply(this, args)
+          .replace('class="zcart-item-img"', 'class="zcart-item-img pplr_original_img"');
+      };
+    
+      zCartRenderGeneration++;
+      zRender(zContext());
+    })();
+```
+
+---
+
 ### Test
 
 ```jsx
 
 ```
+
