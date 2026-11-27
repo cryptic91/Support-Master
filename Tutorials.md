@@ -167,6 +167,10 @@ Tags: Tutorials
 
 ### Preview Related 📷
 
+- How to get a print ready file using the duiplicate view?
+
+    [https://www.loom.com/share/baa94507fba34c27bb7ed2a8469efb84](https://www.loom.com/share/baa94507fba34c27bb7ed2a8469efb84)
+
 - How to turn on / turn off the **preview generate**?
     
     [https://www.loom.com/share/c687089703784d5c9d505628490204c9?sid=dcfe2005-1e1e-422d-ab65-5baafc1f8a3f](https://www.loom.com/share/c687089703784d5c9d505628490204c9?sid=dcfe2005-1e1e-422d-ab65-5baafc1f8a3f)
